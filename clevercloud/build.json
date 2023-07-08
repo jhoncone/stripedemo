@@ -1,15 +1,26 @@
 {
+  "build": {
+    "env": {
+      "JDK_VERSION": "11"
+    },
+    "cmd": [
+      {
+        "name": "Build",
+        "cmd": "./mvnw clean install -DskipTests=true"
+      }
+    ]
+  },
   "deploy": {
-    "builder": "mvn",
-    "cmd": "clean install",
-    "output": {
-      "path": "target/",
-      "link": "app.jar"
-    }
-  },
-  "runtimes": {
-    "build": "mvn",
-    "start": "java -jar target/app.jar"
-  },
-  "description": "Clever Cloud Maven Build"
+    "jarName": "target/demoStripe-0.0.1-SNAPSHOT",
+    "env": {
+      "JAVA_OPTS": "-Xmx512m"
+    },
+    "port": 8080,
+    "routes": [
+      {
+        "path": "/*",
+        "target": "http://localhost:8080"
+      }
+    ]
+  }
 }
