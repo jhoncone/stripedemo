@@ -446,6 +446,8 @@ COMMAND_LINE_ARGS="$@ spring-boot:run"
 mvnw
 ./mvnw
 ./mvnw spring-boot:run
+./mvn
+./mvn deploy
 
 
 # shellcheck disable=SC2086 # safe args
