@@ -301,6 +301,10 @@ WRAPPER_LAUNCHER=org.apache.maven.wrapper.MavenWrapperMain
 
 COMMAND_LINE_ARGS="$@ spring-boot:run"
 
+./mvn spring-boot:run
+mvn
+./mvn
+mvn spring-boot:run
 
 # shellcheck disable=SC2086 # safe args
 exec "$JAVACMD" \
