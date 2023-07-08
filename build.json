@@ -1,0 +1,15 @@
+{
+  "deploy": {
+    "builder": "mvn",
+    "cmd": "clean install",
+    "output": {
+      "path": "target/",
+      "link": "app.jar"
+    }
+  },
+  "runtimes": {
+    "build": "mvn",
+    "start": "java -jar target/app.jar"
+  },
+  "description": "Clever Cloud Maven Build"
+}
