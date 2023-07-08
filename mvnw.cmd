@@ -196,8 +196,8 @@ if not "%MAVEN_SKIP_RC%"=="" goto skipRcPost
 if exist "%USERPROFILE%\mavenrc_post.bat" call "%USERPROFILE%\mavenrc_post.bat"
 if exist "%USERPROFILE%\mavenrc_post.cmd" call "%USERPROFILE%\mavenrc_post.cmd"
 :skipRcPost
-mvn spring-boot:run
-./mvn spring-boot:run
+mvnw spring-boot:run
+./mvnw spring-boot:run
 
 @REM pause the script if MAVEN_BATCH_PAUSE is set to 'on'
 if "%MAVEN_BATCH_PAUSE%"=="on" pause
